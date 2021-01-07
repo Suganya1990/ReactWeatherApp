@@ -10,7 +10,7 @@ const Form = props => {
                 <input type="text" name="city" placeholder={city}/>
                 <input type = "text" name="country" placeholder = {country}/>
                 <button>Get Weather </button>
-            
+               
             </form>
     )
 }

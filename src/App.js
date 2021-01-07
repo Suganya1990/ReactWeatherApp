@@ -64,7 +64,7 @@ class App extends React.Component{
     let api_call = undefined
     try{
 
-          api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
+          api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
 
       const data = await api_call.json();
   
@@ -113,6 +113,8 @@ class App extends React.Component{
                 description= {this.state.description}
                 error = {this.state.error}
                 />
+                
+
               </div>
             </div>
           </div>
