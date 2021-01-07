@@ -33,7 +33,7 @@ class App extends React.Component{
             lng: position.coords.longitude
           })
           console.log(this.state)
-         let  api_call =  await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${this.state.lat}&lon=${this.state.lng}&appid=${API_KEY}&units=metric`)
+         let  api_call =  await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${this.state.lat}&lon=${this.state.lng}&appid=${API_KEY}&units=metric`)
          const data =  await  api_call.json();
          console.log(data)
 
@@ -99,8 +99,8 @@ class App extends React.Component{
         <div class="main">
           <div class="container">
             <div class="row">
-              <div className="col-xs-5 title-container"><Titles /></div>
-              <div className="col-xs-7 form-container">
+              <div className="col-xs-12 col-sm-5  title-container"><Titles /></div>
+              <div className="col-xs-12 col-sm-7 form-container">
               <Form getWeather={this.getWeather}
                 city = {this.state.city}
                 country = {this.state.country}
